@@ -34,7 +34,7 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;scroll-behavior:smooth}
     a{color:var(--fg);text-decoration:none}
-    a.button{display:inline-block;padding:14px 18px;border-radius:14px;font-weight:700;letter-spacing:.2px}
+    a.button,button.button{display:inline-block;padding:14px 18px;border-radius:14px;font-weight:700;letter-spacing:.2px;cursor:pointer}
     .primary{background:var(--accent);color:#fff}
     .secondary{background:transparent;border:1px solid var(--line)}
     .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
@@ -82,9 +82,10 @@
       .two,.three{grid-template-columns:1fr}
       nav{display:none}
     }
-    a:focus{outline:2px dashed var(--accent);outline-offset:3px}
+    a:focus,button:focus{outline:2px dashed var(--accent);outline-offset:3px}
     .success{display:none;border:1px solid var(--line);background:#0e141a;border-radius:12px;padding:14px;margin-top:12px}
     .success.show{display:block}
+    .small{font-size:13px;color:var(--muted)}
   </style>
 
   <script type="application/ld+json">
@@ -109,7 +110,7 @@
         <span>GiM</span><span class="dot" aria-hidden="true"></span><span>Hospitality Solutions</span>
       </div>
       <nav aria-label="Primary">
-        <a href="#offers">Offers</a>
+        <a href="#offers">Packages</a>
         <a href="#process">Process</a>
         <a href="#deliverables">Deliverables</a>
         <a href="#about">About</a>
@@ -128,7 +129,7 @@
         <p class="sub">For venues running on legacy POS systems, we turn your messy CSV exports into a clear, reliable picture of operations. Start with a <strong>Data Health Check</strong> to see if your data is audit-ready. Find and fix leaks without buying new hardware.</p>
         <div class="cta">
           <a class="button primary" href="#book" aria-label="Start a £299 Data Health Check">Start a £299 Data Health Check</a>
-          <a class="button secondary" href="#process">See the Process</a>
+          <a class="button secondary" href="#offers">See Packages</a>
         </div>
         <div class="trustbar">An offline, vendor-neutral service for independent venues across the UK.</div>
         <div class="kpis" role="list">
@@ -144,33 +145,34 @@
       </div>
     </section>
 
+    <!-- Packages near the top -->
     <section id="offers">
       <div class="wrap">
-        <div class="eyebrow">Our Offers</div>
-        <h2>A clear path from data chaos to operational control.</h2>
+        <div class="eyebrow">Packages</div>
+        <h2>Pick a cycle. Book it. We’ll do the boring parts.</h2>
         <div class="grid three">
           <div class="card">
             <h3>Tier 0: Data Health Check</h3>
             <p class="metric">£299</p>
-            <p>The essential first step. We ingest four weeks of your POS &amp; roster files and return a Data Quality (DQ) Report. This gives you a Pass/Fail for audit-readiness and highlights core issues. Facts only, no advice.</p>
-            <a class="button secondary" style="margin-top:10px" href="#book">Book a DQ Check</a>
+            <p>The essential first step. We ingest four weeks of your POS &amp; roster files and return a Data Quality (DQ) Report. Pass/Fail for audit-readiness. Facts only.</p>
+            <a class="button primary" style="margin-top:10px" href="#book">Book a DQ Check</a>
           </div>
           <div class="card">
             <h3>Tier 1: Core Cycle</h3>
             <p class="metric">£749</p>
-            <p>Our signature 4-week audit (1 deep + 3 light touches). You get a 1-page report with 3 concrete actions each cycle. We find the leaks and give you the routine to fix them. <em>Requires a “Pass” from the Data Health Check.</em></p>
-            <a class="button secondary" style="margin-top:10px" href="#book">Book a Core Cycle</a>
+            <p>Our signature 4-week audit (1 deep + 3 light touches). You get a 1‑page report with 3 concrete actions each cycle. <em>Requires a “Pass” from the DQ Check.</em></p>
+            <a class="button primary" style="margin-top:10px" href="#book">Book a Core Cycle</a>
           </div>
           <div class="card">
             <h3>Tier 1+: Standing Cycle</h3>
             <p class="metric">£699</p>
-            <p>For existing clients who want to maintain discipline. You get a reserved monthly slot for a Core Cycle at a reduced rate. No subscription—confirm with one click, pause anytime. Keeps the factory running.</p>
-            <a class="button secondary" style="margin-top:10px" href="#book">Reserve a Standing Cycle</a>
+            <p>Reserved monthly slot at a reduced rate. No subscription—confirm with one click, pause anytime. Keeps the factory running.</p>
+            <a class="button primary" style="margin-top:10px" href="#book">Reserve a Standing Cycle</a>
           </div>
         </div>
-        <div class="muted" style="margin-top:18px;font-size:14px;text-align:center;">
-          Other options include a 2-week <strong>Sprint (£399)</strong> and a remote-only <strong>Data Fellowship (£549)</strong>.
-          <a href="mailto:clayton.forde@proton.me?subject=Other%20GiM%20Offers">Contact us for details</a>.
+        <div class="muted small" style="margin-top:18px;text-align:center;">
+          Also available: <strong>Sprint (£399)</strong> and remote-only <strong>Data Fellowship (£549)</strong> —
+          <a href="mailto:clayton.forde@proton.me?subject=Other%20GiM%20Offers">email us</a> for details.
         </div>
       </div>
     </section>
@@ -386,7 +388,7 @@
           </div>
 
           <div class="card" style="margin-top:18px">
-            <label><input type="checkbox" name="consent" required> I agree to the Data Addendum &amp; privacy policy.</label>
+            <label><input type="checkbox" name="consent" required> I agree to the <a href="#privacy">Data Addendum &amp; Privacy Policy</a>.</label>
           </div>
 
           <div class="cta" style="margin-top:18px">
@@ -395,6 +397,37 @@
             <a class="button secondary" href="tel:+447375609626">Call Clayton</a>
           </div>
         </form>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="wrap">
+        <div class="eyebrow">Privacy &amp; Data Addendum</div>
+        <h2>How we handle your data</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>Privacy Policy (summary)</h3>
+            <ul>
+              <li><strong>Controller:</strong> GiM Hospitality Solutions (contact below)</li>
+              <li><strong>Data we process:</strong> POS/roster exports (CSV/XLS), operational metadata; no card PANs.</li>
+              <li><strong>Lawful basis:</strong> Contract (service delivery) and Legitimate Interests (DQ improvement).</li>
+              <li><strong>Retention:</strong> Raw files kept only as long as needed for the service; anonymised aggregates retained for quality and benchmarking.</li>
+              <li><strong>Your rights:</strong> Access, rectification, deletion, objection. Email requests to <a href="mailto:clayton.forde@proton.me">clayton.forde@proton.me</a>.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Data Addendum (summary)</h3>
+            <ul>
+              <li><strong>Purpose:</strong> Deliver audits and improve our deterministic rules.</li>
+              <li><strong>Anonymisation:</strong> Staff IDs hashed; PII stripped by default.</li>
+              <li><strong>Scope:</strong> Read-only use of exported files; no changes to your tills.</li>
+              <li><strong>Subprocessors:</strong> Netlify (form handling) and secure local storage.</li>
+              <li><strong>Revocation:</strong> You may revoke future use of identifiable data; anonymised aggregates may be retained.</li>
+            </ul>
+            <p class="small">A full, lawyer-friendly version is available on request. We can sign an NDA.</p>
+          </div>
+        </div>
+        <p class="small">Contact: <a href="mailto:clayton.forde@proton.me">clayton.forde@proton.me</a> · <a href="tel:+447375609626">+44 7375 609626</a></p>
       </div>
     </section>
   </main>
@@ -413,7 +446,8 @@
     if (params.get('submitted') === 'true') {
       const box = document.getElementById('success');
       if (box) box.classList.add('show');
-      window.scrollTo({ top: document.getElementById('book').offsetTop - 80, behavior: 'smooth' });
+      const el = document.getElementById('book');
+      if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
     }
   </script>
 </body>
