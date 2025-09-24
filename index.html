@@ -6,7 +6,7 @@
   <title>GiM Hospitality Solutions · Data Health Checks & Audits</title>
   <meta name="description" content="Start with a £299 Data Health Check for your old POS. We turn messy venue data (CSV/XLS) into a clear picture of operations so you can stop leaks and cut variance." />
   <meta name="theme-color" content="#0A0B0D" />
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/png" href="https://placehold.co/32x32/png" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="GiM Hospitality Solutions · AuditCore" />
@@ -99,7 +99,15 @@
     "url":"https://example.com/gim-auditcore",
     "email":"mailto:clayton.forde@proton.me",
     "telephone":"+447375609626",
-    "service":{"@type":"Service","name":"Data Health Check","priceRange":"£299"}
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Data Health Check"
+      },
+      "price": "299",
+      "priceCurrency": "GBP"
+    }
   }
   </script>
 </head>
@@ -117,8 +125,6 @@
         <a href="#security">Data Security</a>
         <a href="#faq">FAQ</a>
         <a href="#book">Book</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="dpa.html">Data Addendum</a>
       </nav>
     </div>
   </header>
@@ -386,11 +392,12 @@
           <div class="card" style="margin-top:18px">
             <h3>Optional file upload</h3>
             <p class="muted">Attach sample CSV/XLSX exports (max ~10MB total).</p>
+            <input type="hidden" name="files" />
             <input type="file" name="files" accept=".csv,.xls,.xlsx" multiple>
           </div>
 
           <div class="card" style="margin-top:18px">
-            <label><input type="checkbox" name="consent" required> I agree to the <a href="privacy.html">Data Addendum &amp; Privacy Policy</a>.</label>
+            <label><input type="checkbox" name="consent" required> I agree to the Data Addendum &amp; Privacy Policy.</label>
           </div>
 
           <div class="cta" style="margin-top:18px">
@@ -407,7 +414,7 @@
     <div class="wrap">
       <div>© 2025 GiM Hospitality Solutions · AuditCore</div>
       <div class="muted" style="margin-top:6px">
-        <a href="privacy.html">Privacy</a> · <a href="dpa.html">Data Addendum</a> · <a href="#top">Back to top ↑</a> ·
+        <a href="#top">Back to top ↑</a> ·
         <a href="mailto:clayton.forde@proton.me">clayton.forde@proton.me</a> · <a href="tel:+447375609626">+44&nbsp;7375&nbsp;609626</a>
       </div>
     </div>
