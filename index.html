@@ -76,11 +76,15 @@
     .k .tag{color:var(--muted);font-size:12px;display:block}
     .k .val{font-weight:800}
     .muted{color:var(--muted)}
+    .contact{margin-top:12px;color:var(--muted);font-size:14px}
+    .contact a{color:var(--fg);text-decoration:underline}
     @media (max-width:860px){
       .two,.three{grid-template-columns:1fr}
       nav{display:none}
     }
     a:focus{outline:2px dashed var(--accent);outline-offset:3px}
+    .success{display:none;border:1px solid var(--line);background:#0e141a;border-radius:12px;padding:14px;margin-top:12px}
+    .success.show{display:block}
   </style>
 
   <script type="application/ld+json">
@@ -92,6 +96,8 @@
     "areaServed":"UK",
     "address":{"@type":"PostalAddress","addressCountry":"GB"},
     "url":"https://example.com/gim-auditcore",
+    "email":"mailto:clayton.forde@proton.me",
+    "telephone":"+447375609626",
     "service":{"@type":"Service","name":"Data Health Check","priceRange":"£299"}
   }
   </script>
@@ -106,8 +112,10 @@
         <a href="#offers">Offers</a>
         <a href="#process">Process</a>
         <a href="#deliverables">Deliverables</a>
+        <a href="#about">About</a>
         <a href="#security">Data Security</a>
         <a href="#faq">FAQ</a>
+        <a href="#book">Book</a>
       </nav>
     </div>
   </header>
@@ -119,7 +127,7 @@
         <h1>Your POS data is a mess. <br><span style="color:var(--accent)">We make it clean &amp; actionable.</span></h1>
         <p class="sub">For venues running on legacy POS systems, we turn your messy CSV exports into a clear, reliable picture of operations. Start with a <strong>Data Health Check</strong> to see if your data is audit-ready. Find and fix leaks without buying new hardware.</p>
         <div class="cta">
-          <a class="button primary" href="#offers" aria-label="Start a £299 Data Health Check">Start a £299 Data Health Check</a>
+          <a class="button primary" href="#book" aria-label="Start a £299 Data Health Check">Start a £299 Data Health Check</a>
           <a class="button secondary" href="#process">See the Process</a>
         </div>
         <div class="trustbar">An offline, vendor-neutral service for independent venues across the UK.</div>
@@ -127,6 +135,11 @@
           <div class="k" role="listitem"><span class="tag">Entry point</span><span class="val">£299 Data Health Check</span></div>
           <div class="k" role="listitem"><span class="tag">Turnaround</span><span class="val">5-day SLA on Health Check</span></div>
           <div class="k" role="listitem"><span class="tag">Data needed</span><span class="val">CSV/XLS Exports Only</span></div>
+        </div>
+        <div class="contact">
+          <strong>Contact:</strong>
+          <a href="mailto:clayton.forde@proton.me">clayton.forde@proton.me</a> ·
+          <a href="tel:+447375609626">+44&nbsp;7375&nbsp;609626</a>
         </div>
       </div>
     </section>
@@ -140,24 +153,24 @@
             <h3>Tier 0: Data Health Check</h3>
             <p class="metric">£299</p>
             <p>The essential first step. We ingest four weeks of your POS &amp; roster files and return a Data Quality (DQ) Report. This gives you a Pass/Fail for audit-readiness and highlights core issues. Facts only, no advice.</p>
-            <a class="button secondary" style="margin-top:10px" href="mailto:hello@gimhospitality.com?subject=Book%20Data%20Health%20Check">Book a DQ Check</a>
+            <a class="button secondary" style="margin-top:10px" href="#book">Book a DQ Check</a>
           </div>
           <div class="card">
             <h3>Tier 1: Core Cycle</h3>
             <p class="metric">£749</p>
             <p>Our signature 4-week audit (1 deep + 3 light touches). You get a 1-page report with 3 concrete actions each cycle. We find the leaks and give you the routine to fix them. <em>Requires a “Pass” from the Data Health Check.</em></p>
-            <a class="button secondary" style="margin-top:10px" href="mailto:hello@gimhospitality.com?subject=Book%20Core%20Cycle">Book a Core Cycle</a>
+            <a class="button secondary" style="margin-top:10px" href="#book">Book a Core Cycle</a>
           </div>
           <div class="card">
             <h3>Tier 1+: Standing Cycle</h3>
             <p class="metric">£699</p>
             <p>For existing clients who want to maintain discipline. You get a reserved monthly slot for a Core Cycle at a reduced rate. No subscription—confirm with one click, pause anytime. Keeps the factory running.</p>
-            <a class="button secondary" style="margin-top:10px" href="mailto:hello@gimhospitality.com?subject=Reserve%20Standing%20Cycle">Reserve a Standing Cycle</a>
+            <a class="button secondary" style="margin-top:10px" href="#book">Reserve a Standing Cycle</a>
           </div>
         </div>
         <div class="muted" style="margin-top:18px;font-size:14px;text-align:center;">
           Other options include a 2-week <strong>Sprint (£399)</strong> and a remote-only <strong>Data Fellowship (£549)</strong>.
-          <a href="mailto:hello@gimhospitality.com?subject=Other%20GiM%20Offers">Contact us for details</a>.
+          <a href="mailto:clayton.forde@proton.me?subject=Other%20GiM%20Offers">Contact us for details</a>.
         </div>
       </div>
     </section>
@@ -235,6 +248,32 @@
       </div>
     </section>
 
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow">About GiM</div>
+        <h2>We fix messy venue data with boringly reliable methods.</h2>
+        <div class="grid two">
+          <div class="card">
+            <p>GiM is a hospitality-first audit studio. We work <strong>offline, file-first</strong> (CSV/XLS), normalise your exports, and give you <strong>one page, three actions</strong> every 4 weeks. No new hardware, no lock-in—just practical routines that reduce variance, waste, and rota drift.</p>
+            <ul>
+              <li><strong>Vendor-neutral</strong>: works with legacy POS + Excel rosters</li>
+              <li><strong>Privacy-first</strong>: staff IDs hashed, PII stripped</li>
+              <li><strong>Local &amp; low-friction</strong>: 1 deep + 3 light touches per cycle</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>What success looks like</h3>
+            <ul>
+              <li>Cash variance to <strong>≤ 0.5%</strong> by Week 8</li>
+              <li>Waste <strong>−10–20%</strong> in 4–6 weeks</li>
+              <li>Rota drift <strong>−6–10%</strong></li>
+            </ul>
+            <p class="muted">Evidence over dashboards. Simple routines that stick.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="security">
       <div class="wrap">
         <div class="eyebrow">Data Security &amp; GDPR</div>
@@ -286,14 +325,96 @@
         </details>
       </div>
     </section>
+
+    <section id="book">
+      <div class="wrap">
+        <div class="eyebrow">Book</div>
+        <h2>Book a Data Health Check</h2>
+        <p class="sub">Five-day SLA. We’ll confirm your slot and send the Data Addendum.</p>
+
+        <div id="success" class="success" role="status" aria-live="polite">Thanks! We’ve received your request.</div>
+
+        <!-- Netlify form -->
+        <form name="booking" method="POST" data-netlify="true" netlify-honeypot="trap" action="/?submitted=true" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="booking" />
+          <p style="display:none;">
+            <label>Don’t fill this out if you’re human: <input name="trap" /></label>
+          </p>
+
+          <div class="grid two">
+            <div class="card">
+              <h3>Contact</h3>
+              <label>Full name<br><input type="text" name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label><br><br>
+              <label>Email<br><input type="email" name="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label><br><br>
+              <label>Mobile<br><input type="tel" name="mobile" placeholder="+44 7..." style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label>
+            </div>
+
+            <div class="card">
+              <h3>Venue</h3>
+              <label>Venue name<br><input type="text" name="venue" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label><br><br>
+              <label>Postcode / City<br><input type="text" name="city" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label><br><br>
+              <label>Number of sites<br>
+                <select name="sites" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)">
+                  <option>1</option><option>2–3</option><option>4–6</option><option>7+</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid two" style="margin-top:18px">
+            <div class="card">
+              <h3>Systems</h3>
+              <label>POS vendor<br><input type="text" name="pos" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label><br><br>
+              <label>Roster tool<br><input type="text" name="roster" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label>
+            </div>
+
+            <div class="card">
+              <h3>Service</h3>
+              <label><input type="radio" name="service" value="Data Health Check (£299)" checked> Data Health Check (£299)</label><br>
+              <label><input type="radio" name="service" value="Core Cycle (£749)"> Core Cycle (£749)</label><br>
+              <label><input type="radio" name="service" value="Standing Cycle (£699)"> Standing Cycle (£699)</label><br>
+              <label><input type="radio" name="service" value="Sprint (£399)"> Sprint (£399)</label><br>
+              <label><input type="radio" name="service" value="Data Fellowship (£549)"> Data Fellowship (£549)</label><br><br>
+              <label>Preferred start date<br><input type="date" name="start" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--fg)"></label>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <h3>Optional file upload</h3>
+            <p class="muted">Attach sample CSV/XLSX exports (max ~10MB total).</p>
+            <input type="file" name="files" accept=".csv,.xls,.xlsx" multiple>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <label><input type="checkbox" name="consent" required> I agree to the Data Addendum &amp; privacy policy.</label>
+          </div>
+
+          <div class="cta" style="margin-top:18px">
+            <button class="button primary" type="submit">Send booking request</button>
+            <a class="button secondary" href="mailto:clayton.forde@proton.me?subject=Enquiry%20from%20GiM%20site">Email instead</a>
+            <a class="button secondary" href="tel:+447375609626">Call Clayton</a>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="wrap">
       <div>© 2025 GiM Hospitality Solutions · AuditCore</div>
-      <div class="muted" style="margin-top:6px">Questions? <a href="mailto:hello@gimhospitality.com">hello@gimhospitality.com</a></div>
+      <div class="muted" style="margin-top:6px">Email: <a href="mailto:clayton.forde@proton.me">clayton.forde@proton.me</a> · Phone: <a href="tel:+447375609626">+44&nbsp;7375&nbsp;609626</a></div>
       <div class="muted" style="margin-top:6px"><a href="#top">Back to top ↑</a></div>
     </div>
   </footer>
+
+  <script>
+    // show success message if Netlify redirected to /?submitted=true
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('submitted') === 'true') {
+      const box = document.getElementById('success');
+      if (box) box.classList.add('show');
+      window.scrollTo({ top: document.getElementById('book').offsetTop - 80, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
